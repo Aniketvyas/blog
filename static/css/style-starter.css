@@ -1950,3 +1950,11 @@ form.signin-form {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+#loginDivision{
+    display:none;
+  }
+  
+  #registerDivision{
+    display:none;
+  }

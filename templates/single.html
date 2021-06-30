@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="{% static 'css/style-starter.css' %}">
     <link rel="stylesheet" href="{% static 'css/single.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <title>Blog Guide: How to Start a Personal Blog on WordPress &#8211; News Blog &#8211; Blogging Category WordPress Theme</title>
+    <title>BlogMarix</title>
 
 
 </head>
@@ -27,7 +27,7 @@
         <div class="container w3HeaderLogoEd">
             <nav class="navbar navbar-expand-lg navbar-light fill px-lg-0 py-0 px-sm-3 px-0">
                 <a class="navbar-brand" href="/">
-                    <span class="fa fa-newspaper-o"></span> NewsBlog </a>
+                    <span class="fa fa-newspaper-o"></span> BlogMarix </a>
 
 
                 <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -222,7 +222,7 @@
                                             <h2 class="widget-title">Categories</h2>
                                             <ul>
                                                 {% for i in categories %}
-                                                <li class="cat-item cat-item-2"><a href="category/{{i.name}}">{{i.name}}</a>
+                                                <li class="cat-item cat-item-2"><a href="/category/{{i.name}}">{{i.name}}</a>
                                                 </li>
 
                                                 {% endfor %}
@@ -246,91 +246,51 @@
         <section class="app-footer">
             <footer class="footer-28 py-5">
                 <div class="footer-bg-layer">
-                    <div class="container py-lg-3 NewsBlogFooter">
+                    <div class="container py-lg-3">
                         <div class="row footer-top-28">
-
                             <div class="col-lg-4 footer-list-28 copy-right mb-lg-0 mb-sm-5 mt-sm-0 mt-4">
-
-                                <a class="navbar-brand mb-3 FooterLogo" href="https://wp.w3layouts.com/newsblog/">
-                                    <span class="fa fa-newspaper-o"></span> NewsBlog</a>
-
-                                <!-- copyright -->
-
+                                <a class="navbar-brand mb-3" href="index.html">
+                                    <span class="fa fa-newspaper-o"></span> BlogMarix</a>
+    
                             </div>
-                            <!-- //copyright -->
-
                             <div class="col-lg-8 row">
-
                                 <div class="col-sm-4 col-6 footer-list-28">
-
-                                    <!-- <div id="recent-posts-4" class="widget_recent_entries">
-                                        <h6 class="footer-title-28">Recent Posts</h6>
-                                        <ul>
-                                            <li>
-                                                <a href="https://wp.w3layouts.com/newsblog/2021/02/27/3-new-outfit-formulas-to-add-to-your-capsule-wardrobe-4/">3 New Outfit Formulas To Add To Your Capsule Wardrobe</a>
-                                                <span class="post-date">February 27, 2021</span>
-                                            </li>
-                                            <li>
-                                                <a href="https://wp.w3layouts.com/newsblog/2021/02/27/blog-guide-how-to-start-a-personal-blog-on-wordpress-2/" aria-current="page">Blog Guide: How to Start a Personal Blog on WordPress</a>
-                                                <span class="post-date">February 27, 2021</span>
-                                            </li>
-                                            <li>
-                                                <a href="https://wp.w3layouts.com/newsblog/2021/02/27/the-technical-setup-when-starting-a-personal-blog/">The technical setup when starting a personal blog</a>
-                                                <span class="post-date">February 27, 2021</span>
-                                            </li>
-                                        </ul>
-
-                                    </div> -->
+                                    <h6 class="footer-title-28">Useful links</h6>
+                                    <ul>
+                                        <li><a href="/category/food">food blogs</a></li>
+                                        <li><a href="/contact">Advertise with us</a></li>
+                                        <!-- <li><a href="#authors">Our Authors</a></li> -->
+                                        <li><a href="/contact">Get in touch</a></li>
+                                    </ul>
                                 </div>
-
                                 <div class="col-sm-4 col-6 footer-list-28">
-                                    <div id="categories-6" class="widget_categories">
-                                        <h6 class="footer-title-28">Categories</h6>
-                                        <ul>
-                                            {% for i in categories %}
-                                            <li class="cat-item cat-item-2"><a href="/category/{{i.name}}">{{i.name}}</a>
-                                            </li>
-                                            {% endfor %}
-                                        </ul>
-
-                                    </div>
+                                    <h6 class="footer-title-28">Categories</h6>
+                                    <ul>
+                                        {% for i in categories %}
+                                        <li><a href="/category/{{i.name}}">{{i.name}}</a></li>
+                                        {% endfor %}
+                                        <!-- <li><a href="fashion.html">Fashion and Style</a></li>
+                                        <li><a href="#food"> Food and Wellness</a></li>
+                                        <li><a href="#lifestyle">Lifestyle</a></li> -->
+                                    </ul>
                                 </div>
-
-                                <div class="col-sm-4 col-6 footer-list-28 mt-sm-0 mt-4 FooterSocial">
+                                <div class="col-sm-4 col-6 footer-list-28 mt-sm-0 mt-4">
                                     <h6 class="footer-title-28">Social Media</h6>
                                     <ul class="social-icons">
                                         <li class="facebook">
-                                            <a href="https://www.facebook.com/w3layouts/"><span
-                                                class="fa fa-facebook"></span> Facebook</a>
-                                        </li>
-
-                                        <li class="twitter">
-                                            <a href="https://twitter.com/W3layouts"><span
-                                                class="fa fa-twitter"></span>
-                                                Twitter</a>
-                                        </li>
-
-                                        <li class="linkedin">
-                                            <a href="https://in.linkedin.com/company/w3layouts"><span
-                                                class="fa fa-linkedin"></span> Linkedin</a>
-                                        </li>
-
-                                        <li class="dribbble">
-                                            <a href="https://dribbble.com/w3layouts"><span
-                                                class="fa fa-dribbble"></span> Dribbble</a>
-                                        </li>
-
+                                            <a href="#facebook"><span class="fa fa-facebook"></span> Facebook</a></li>
+                                        <li class="twitter"> <a href="#twitter"><span class="fa fa-twitter"></span> Twitter</a></li>
+                                        <li class="linkedin"> <a href="#linkedin"><span class="fa fa-linkedin"></span> Linkedin</a></li>
+                                        <li class="dribbble"><a href="#dribbble"><span class="fa fa-dribbble"></span> Dribbble</a></li>
                                     </ul>
+    
                                 </div>
-
                             </div>
-
                         </div>
                     </div>
                 </div>
                 </div>
             </footer>
-
             <!-- move top -->
             <button onclick="topFunction()" id="movetop" title="Go to top">
     <span class="fa fa-angle-up"></span>
@@ -423,10 +383,10 @@
         <!-- bootstrap -->
         <script src="https://wp.w3layouts.com/newsblog/wp-content/themes/news-blog/assets/js/bootstrap.min.js"></script>
 
-
-        <script src='https://wp.w3layouts.com/newsblog/wp-content/themes/news-blog/js/navigation.js?ver=1.0.0' id='w3layouts-navigation-js'></script>
+        
+        <!-- <script src='https://wp.w3layouts.com/newsblog/wp-content/themes/news-blog/js/navigation.js?ver=1.0.0' id='w3layouts-navigation-js'></script>
         <script src='https://wp.w3layouts.com/newsblog/wp-includes/js/comment-reply.min.js?ver=5.6.4' id='comment-reply-js'></script>
-        <script src='https://wp.w3layouts.com/newsblog/wp-includes/js/wp-embed.min.js?ver=5.6.4' id='wp-embed-js'></script>
+        <script src='https://wp.w3layouts.com/newsblog/wp-includes/js/wp-embed.min.js?ver=5.6.4' id='wp-embed-js'></script> -->
 
 </body>
 

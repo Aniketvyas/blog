@@ -11,3 +11,4 @@ admin.site.register(tags)
 admin.site.register(blogPlusTags)
 
 admin.site.register(newsletterSubscription)
+admin.site.register(contactQueries)

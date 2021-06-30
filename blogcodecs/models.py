@@ -10,7 +10,7 @@ class blogs(models.Model):
     image = models.ImageField()
     content = RichTextField(blank=True,null=True)
     submitedBy = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE)
-    dateUploaded = models.DateTimeField()
+    dateUploaded = models.DateTimeField(auto_now_add=True)
     updatedOn = models.DateTimeField(auto_now_add=True)
     category = models.ForeignKey('category',on_delete=models.CASCADE)
     likes = models.IntegerField()
@@ -57,3 +57,15 @@ class newsletterSubscription(models.Model):
 
     def __str__(self):
         return self.email
+
+
+class contactQueries(models.Model):
+    id = models.AutoField(primary_key=True)
+    email = models.EmailField()
+    subject = models.CharField(max_length=10000)
+    phoneNumber = models.BigIntegerField()
+    name = models.CharField(max_length=1000)
+    message = models.TextField()
+
+    def __str__(self):
+        return self.name+ " - " + self.subject + ' - '+self.message

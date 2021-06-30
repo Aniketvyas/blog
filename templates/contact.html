@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>NewsBlog a Blog Category Bootstrap Responsive Website Template | Contact : ayouts</title>
+    <title>BlogMarix</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
     <link href="//fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -24,7 +24,7 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light fill px-lg-0 py-0 px-sm-3 px-0">
                 <a class="navbar-brand" href="/">
-                    <span class="fa fa-newspaper-o"></span> NewsBlog</a>
+                    <span class="fa fa-newspaper-o"></span> BlogMarix</a>
                 <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<!-- <span class="navbar-toggler-icon"></span> -->
 				<span class="fa icon-expand fa-bars"></span>
@@ -41,13 +41,19 @@
                         </div>
                     </nav>
                     <ul class="navbar-nav">
-                        <li class="nav-item @@home__active">
+                        <li class="nav-item active">
                             <a class="nav-link" href="/">Home</a>
                         </li>
+                        {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <a href="/dashboard" class="nav-link">Dashboard</a>
+                        </li>
+                        {% endif %}
+
 
                         {% if user.is_authenticated %}
                         <li class="nav-item @@contact__active">
-                            <a class="nav-link" href="accounts/logout">Logout, {{user.username}}</a>
+                            <a class="nav-link" href="/accounts/logout">Logout, {{user.username}}</a>
                         </li>
                         {% else %}
                         <li class="nav-item @@contact__active">
@@ -89,23 +95,23 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-8 form-inner-cont">
-                        <form action="/submitForm" method="post" class="signin-form">
+                        <form action="/submitForm" method="post" class="signin-form"> {% csrf_token %}
                             <div class="form-grids">
                                 <div class="form-input">
-                                    <input type="text" name="Name" id="Name" placeholder="Enter your name *" required="" />
+                                    <input type="text" name="name" name="name" placeholder="Enter your name *" required="" />
                                 </div>
                                 <div class="form-input">
-                                    <input type="text" name="Subject" id="Subject" placeholder="Enter subject " required />
+                                    <input type="text" name="subject" name="subject" placeholder="Enter subject " required />
                                 </div>
                                 <div class="form-input">
-                                    <input type="email" name="Sender" id="Sender" placeholder="Enter your email *" required />
+                                    <input type="email" name="email" name="email" placeholder="Enter your email *" required />
                                 </div>
                                 <div class="form-input">
-                                    <input type="text" name="Phone" id="Phone" placeholder="Enter your Phone Number *" required />
+                                    <input type="text" name="phone" name="phone" placeholder="Enter your Phone Number *" required />
                                 </div>
                             </div>
                             <div class="form-input">
-                                <textarea name="Message" id="Message" placeholder="Your message here" required=""></textarea>
+                                <textarea name="message" placeholder="Your message here" required=""></textarea>
                             </div>
                             <div class="text-right">
                                 <button class="btn btn-style btn-primary">Submit</button>
@@ -148,26 +154,28 @@
                     <div class="row footer-top-28">
                         <div class="col-lg-4 footer-list-28 copy-right mb-lg-0 mb-sm-5 mt-sm-0 mt-4">
                             <a class="navbar-brand mb-3" href="index.html">
-                                <span class="fa fa-newspaper-o"></span> NewsBlog</a>
+                                <span class="fa fa-newspaper-o"></span> BlogMarix</a>
 
                         </div>
                         <div class="col-lg-8 row">
                             <div class="col-sm-4 col-6 footer-list-28">
                                 <h6 class="footer-title-28">Useful links</h6>
                                 <ul>
-                                    <li><a href="#categories">food blogs</a></li>
-                                    <li><a href="#advertise">Advertise with us</a></li>
-                                    <li><a href="#authors">Our Authors</a></li>
-                                    <li><a href="contact.html">Get in touch</a></li>
+                                    <li><a href="/category/food">food blogs</a></li>
+                                    <li><a href="/contact">Advertise with us</a></li>
+                                    <!-- <li><a href="#authors">Our Authors</a></li> -->
+                                    <li><a href="/contact">Get in touch</a></li>
                                 </ul>
                             </div>
                             <div class="col-sm-4 col-6 footer-list-28">
                                 <h6 class="footer-title-28">Categories</h6>
                                 <ul>
-                                    <li><a href="beauty.html">Beauty</a></li>
-                                    <li><a href="fashion.html">Fashion and Style</a></li>
+                                    {% for i in categories %}
+                                    <li><a href="/category/{{i.name}}">{{i.name}}</a></li>
+                                    {% endfor %}
+                                    <!-- <li><a href="fashion.html">Fashion and Style</a></li>
                                     <li><a href="#food"> Food and Wellness</a></li>
-                                    <li><a href="#lifestyle">Lifestyle</a></li>
+                                    <li><a href="#lifestyle">Lifestyle</a></li> -->
                                 </ul>
                             </div>
                             <div class="col-sm-4 col-6 footer-list-28 mt-sm-0 mt-4">
@@ -273,6 +281,11 @@
 
     <!-- bootstrap -->
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    {% for i in messages %} 
+    <script>
+        alert('{{i}}')
+    </script>
+    {% endfor %}
 
 </body>
 

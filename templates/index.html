@@ -7,15 +7,25 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Blog | Home</title>
+    <title>BlogMarix | Home</title>
 
     <link href="//fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link href="//fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <!-- Template CSS -->
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
     <link rel="stylesheet" href="{% static 'css/style-starter.css' %}">
+    <style>
+        #loginDivision{
+    display:none;
+  }
+  
+  #registerDivision{
+    display:none;
+  }
+    </style>
 </head>
 
 <body>
@@ -25,7 +35,7 @@
             <!--/nav-->
             <nav class="navbar navbar-expand-lg navbar-light fill px-lg-0 py-0 px-sm-3 px-0">
                 <a class="navbar-brand" href="/">
-                    <span class="fa fa-newspaper-o"></span> NewsBlog</a>
+                    <span class="fa fa-newspaper-o"></span> BlogMarix</a>
                 <!-- if logo is image enable this   
 						<a class="navbar-brand" href="#index.html">
 							<img src="{% static 'image-path" alt="Your logo" title="Your logo" style="height:35px;" />
@@ -51,6 +61,11 @@
                         <li class="nav-item active">
                             <a class="nav-link" href="/">Home</a>
                         </li>
+                        {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <a href="/dashboard" class="nav-link">Dashboard</a>
+                        </li>
+                        {% endif %}
 
 
                         {% if user.is_authenticated %}
@@ -99,12 +114,43 @@
         <span aria-hidden="true">&times;</span>
       </button>
                 </div>
-                <form action="accounts/login" method="POST"> {% csrf_token %}
+                <div id="loginDivision">
+                <form action="/accounts/login" method="POST"> {% csrf_token %}
                     <div class="modal-body">
                         <div class="m-2">
                             <input type="text" name="username" placeholder="Email" class="form-control"></div>
                         <div class="m-2">
                             <input type="password" name="password" placeholder="password" class="form-control"></div>
+                    </div>
+                    <p class="text-center text-dark">Didn't have an Account? <button type="button" onclick="changeToRegister()" class="btn btn-outline-primary">Register</button></p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary ml-2">Save changes</button>
+                    </div>
+                </form>
+            </div>
+            <div id="registerDivision">
+                <form action="accounts/register" method = "POST">
+                    <div class="modal-body">
+                        <div class="col-xl-12">
+                            <div class="row m-2">
+                                <div class="col-xl-6 col-lg-6 col-md-6">
+                                    <input type="text" name="first_name" placeholder="First Name" class="form-control">
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-6">
+                                    <input type="text" name="last_nmae" placeholder="Last Name" class="form-control">
+                                </div>
+                            </div>
+                            <div class="row m-2">
+                                <div class="col-xl-6 col-lg-6 col-md-6">
+                                    <input type="email" name="username" placeholder="username/email" class="form-control">
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-6">
+                                    <input type="password" name="password" placeholder="password" class="form-control">
+                                </div>
+                            </div>
+                            <p class="text-center text-dark">Already have an Account?<button type="button" class="btn btn-outline-primary ml-2" onclick="changeToLogin()">Login</button></p>
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -112,47 +158,10 @@
                     </div>
                 </form>
             </div>
-        </div>
-    </div>
-    <!-- <section class="-homeblock1 py-sm-5 py-4">
-        <div class="container py-md-4">
-            <div class="grids-area-hny main-cont-wthree-fea row">
-                <div class="col-lg-3 col-6 grids-feature">
-                    <a href="beauty.html">
-                        <div class="area-box">
-                            <span class="fa fa-bath"></span>
-                            <h4 class="title-head">Beauty</h4>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-6 grids-feature">
-                    <a href="fashion.html">
-                        <div class="area-box">
-                            <span class="fa fa-female"></span>
-                            <h4 class="title-head">Fashion and style</h4>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-6 grids-feature mt-lg-0 mt-md-4 mt-3">
-                    <a href="#food">
-                        <div class="area-box">
-                            <span class="fa fa-cutlery"></span>
-                            <h4 class="title-head">Food and wellness</h4>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-6 grids-feature mt-lg-0 mt-md-4 mt-3">
-                    <a href="#lifsetyle">
-                        <div class="area-box">
-                            <span class="fa fa-pie-chart"></span>
-                            <h4 class="title-head">Lifestyle</h4>
-                        </div>
-                    </a>
-                </div>
             </div>
         </div>
-    </section> -->
-    <!-- //homeblock1-->
+    </div>
+    
 
     <section class="-testimonials mt-xl-4" id="testimonials">
         <!-- main-slider -->
@@ -170,7 +179,7 @@
                                     <p class="message">{{i.blog.content|safe}}</p>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-8 img-circle mt-lg-0 mt-4">
+                            <div class="col-lg-4 col-md-4 img-circle mt-lg-0 mt-4 text-center">
                                 <img src="/media/{{i.blog.image}}" height="400px" width="350px" class=" radius-image-full" alt="client image">
                             </div>
                         </div>
@@ -243,7 +252,7 @@
                     </div>
                     <div class="mt-4 left-right bg-clr-white p-3">
                         <h3 class="section-title-left align-self pl-2 mb-sm-0 mb-3">Advertise with us </h3>
-                        <a class="btn btn-style btn-primary" href="#url">Learn more</a>
+                        <a class="btn btn-style btn-primary" href="/contact">Learn more</a>
                     </div>
                 </div>
                 <div class="col-lg-4 trending mt-lg-0 mt-5">
@@ -297,203 +306,7 @@
             </div>
         </div>
     </div>
-    <!-- <div class="-homeblock2 py-5">
-        <div class="container py-lg-5 py-md-4">
     
-            <div class="left-right">
-                <h3 class="section-title-left mb-sm-4 mb-2"> Fashion and style</h3>
-                <a href="fashiom.html" class="more btn btn-small mb-sm-0 mb-4">View more</a>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 item">
-                    <div class="card">
-                        <div class="card-header p-0 position-relative">
-                            <a href="#blog-single.html">
-                                <img class="card-img-bottom d-block radius-image-full" src="{% static 'images/fashion1.jpg' %}" alt="Card image cap">
-                            </a>
-                        </div>
-                        <div class="card-body blog-details">
-                            <a href="#blog-single.html" class="blog-desc">An easy Guide to buying Denim & My favourite styles
-                        </a>
-                            <div class="author align-items-center">
-                                <img src="{% static 'images/a1.jpg' %}" alt="" class="img-fluid rounded-circle" />
-                                <ul class="blog-meta">
-                                    <li>
-                                        <a href="author.html">Isabella ava</a> </a>
-                                    </li>
-                                    <li class="meta-item blog-lesson">
-                                        <span class="meta-value"> July 13, 2020 </span>. <span class="meta-value ml-2"><span class="fa fa-clock-o"></span> 1 min</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mt-md-0 mt-4">
-                    <div class="card">
-                        <div class="card-header p-0 position-relative">
-                            <a href="#blog-single.html">
-                                <img class="card-img-bottom d-block radius-image-full" src="{% static 'images/fashion2.jpg' %}" alt="Card image cap">
-                            </a>
-                        </div>
-                        <div class="card-body blog-details">
-                            <a href="#blog-single.html" class="blog-desc">The Satin Skirt & How to Wear it all year round fashion
-                        </a>
-                            <div class="author align-items-center">
-                                <img src="{% static 'images/a2.jpg' %}" alt="" class="img-fluid rounded-circle" />
-                                <ul class="blog-meta">
-                                    <li>
-                                        <a href="author.html">Charlotte mia</a> </a>
-                                    </li>
-                                    <li class="meta-item blog-lesson">
-                                        <span class="meta-value"> July 13, 2020 </span>. <span class="meta-value ml-2"><span class="fa fa-clock-o"></span> 1 min</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mt-md-0 mt-4">
-                    <div class="card">
-                        <div class="card-header p-0 position-relative">
-                            <a href="#blog-single.html">
-                                <img class="card-img-bottom d-block radius-image-full" src="{% static 'images/fashion3.jpg' %}" alt="Card image cap">
-                            </a>
-                        </div>
-                        <div class="card-body blog-details">
-                            <a href="#blog-single.html" class="blog-desc">What I’ll be Wearing this Party Season & the Festive edit
-                        </a>
-                            <div class="author align-items-center">
-                                <img src="{% static 'images/a3.jpg' %}" alt="" class="img-fluid rounded-circle" />
-                                <ul class="blog-meta">
-                                    <li>
-                                        <a href="author.html">Elizabeth</a> </a>
-                                    </li>
-                                    <li class="meta-item blog-lesson">
-                                        <span class="meta-value"> July 13, 2020 </span>. <span class="meta-value ml-2"><span class="fa fa-clock-o"></span> 1 min</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="-homeblock2 -homeblock5 py-5">
-        <div class="container py-lg-5 py-md-4">
-
-            <div class="left-right">
-                <h3 class="section-title-left mb-sm-4 mb-2"> Beauty</h3>
-                <a href="beauty.html" class="more btn btn-small mb-sm-0 mb-4">View more</a>
-            </div>
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="bg-clr-white hover-box">
-                        <div class="row">
-                            <div class="col-sm-5 position-relative">
-                                <a href="#blog-single.html" class="image-mobile">
-                                    <img class="card-img-bottom d-block radius-image-full" src="{% static 'images/beauty1.jpg' %}" alt="Card image cap">
-                                </a>
-                            </div>
-                            <div class="col-sm-7 card-body blog-details align-self">
-                                <a href="#blog-single.html" class="blog-desc">Natural Spa - Where you feel unique and special
-                            </a>
-                                <div class="author align-items-center">
-                                    <img src="{% static 'images/a1.jpg' %}" alt="" class="img-fluid rounded-circle" />
-                                    <ul class="blog-meta">
-                                        <li>
-                                            <a href="author.html">Isabella ava</a> </a>
-                                        </li>
-                                        <li class="meta-item blog-lesson">
-                                            <span class="meta-value"> July 13, 2020 </span>. <span class="meta-value ml-2"><span class="fa fa-clock-o"></span> 1 min</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mt-lg-0 mt-4">
-                    <div class="bg-clr-white hover-box">
-                        <div class="row">
-                            <div class="col-sm-5 position-relative">
-                                <a href="#blog-single.html" class="image-mobile">
-                                    <img class="card-img-bottom d-block radius-image-full" src="{% static 'images/beauty2.jpg' %}" alt="Card image cap">
-                                </a>
-                            </div>
-                            <div class="col-sm-7 card-body blog-details align-self">
-                                <a href="#blog-single.html" class="blog-desc">How to get Beautiful coloring Highlights this weak
-                            </a>
-                                <div class="author align-items-center">
-                                    <img src="{% static 'images/a2.jpg' %}" alt="" class="img-fluid rounded-circle" />
-                                    <ul class="blog-meta">
-                                        <li>
-                                            <a href="author.html">Charlotte mia</a> </a>
-                                        </li>
-                                        <li class="meta-item blog-lesson">
-                                            <span class="meta-value"> July 13, 2020 </span>. <span class="meta-value ml-2"><span class="fa fa-clock-o"></span> 1 min</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mt-4">
-                    <div class="bg-clr-white hover-box">
-                        <div class="row">
-                            <div class="col-sm-5 position-relative">
-                                <a href="#blog-single.html" class="image-mobile">
-                                    <img class="card-img-bottom d-block radius-image-full" src="{% static 'images/beauty3.jpg' %}" alt="Card image cap">
-                                </a>
-                            </div>
-                            <div class="col-sm-7 card-body blog-details align-self">
-                                <a href="#blog-single.html" class="blog-desc">New Hair Styles can look fabulous and shiny
-                            </a>
-                                <div class="author align-items-center">
-                                    <img src="{% static 'images/a3.jpg' %}" alt="" class="img-fluid rounded-circle" />
-                                    <ul class="blog-meta">
-                                        <li>
-                                            <a href="author.html">Elizabeth</a> </a>
-                                        </li>
-                                        <li class="meta-item blog-lesson">
-                                            <span class="meta-value"> July 13, 2020 </span>. <span class="meta-value ml-2"><span class="fa fa-clock-o"></span> 1 min</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mt-4">
-                    <div class="bg-clr-white hover-box">
-                        <div class="row">
-                            <div class="col-sm-5 position-relative">
-                                <a href="#blog-single.html" class="image-mobile">
-                                    <img class="card-img-bottom d-block radius-image-full" src="{% static 'images/beauty4.jpg' %}" alt="Card image cap">
-                                </a>
-                            </div>
-                            <div class="col-sm-7 card-body blog-details align-self">
-                                <a href="#blog-single.html" class="blog-desc">How our dreams should shine and spray beauty to us.</a>
-                                <div class="author align-items-center">
-                                    <img src="{% static 'images/a1.jpg' %}" alt="" class="img-fluid rounded-circle" />
-                                    <ul class="blog-meta">
-                                        <li>
-                                            <a href="author.html">Isabella ava</a> </a>
-                                        </li>
-                                        <li class="meta-item blog-lesson">
-                                            <span class="meta-value"> July 13, 2020 </span>. <span class="meta-value ml-2"><span class="fa fa-clock-o"></span> 1 min</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
     <div class="-homeblock2 -homeblock6 py-5">
         <div class="container-fluid px-sm-5 py-lg-5 py-md-4">
             <!-- block -->
@@ -511,7 +324,7 @@
                                 </div>
                                 <div class="col-sm-6 card-body blog-details align-self">
                                     <span class="label-blue">{{i.category}}</span>
-                                    <a href="#blog-single.html" class="blog-desc">{{i.title}}
+                                    <a href="/blog/{{i.id}}" class="blog-desc">{{i.title}}
                             </a>
                                     <!-- <p class="limited-content">{{i.content|safe}}</p> -->
                                     <div class="author align-items-center mt-3">
@@ -529,34 +342,7 @@
                             </div>
                         </div>
                     </div>{% endfor %}
-                    <!-- <div class="col-lg-6">
-                        <div class="bg-clr-white hover-box">
-                            <div class="row">
-                                <div class="col-sm-6 position-relative">
-                                    <a href="/blog/{{i.id}}">
-                                        <img class="card-img-bottom d-block radius-image-full" style="height: 300px;" src="/media/{{i.image}}" alt="Card image cap">
-                                    </a>
-                                </div>
-                                <div class="col-sm-6 card-body blog-details align-self">
-                                    <span class="label-blue">{{i.category}}</span>
-                                    <a href="/blog/{{i.id}}" class="blog-desc">{{i.title}}
-                            </a>
-                                    <p class="limited-content">{{i.content|safe}}</p>
-                                    <div class="author align-items-center mt-3">
-                                        <img src="{% static 'images/a2.jpg' %}" alt="" class="img-fluid rounded-circle" />
-                                        <ul class="blog-meta">
-                                            <li>
-                                                <a href="author.html">{{i.submitedBy}}</a> </a>
-                                            </li>
-                                            <li class="meta-item blog-lesson">
-                                                <span class="meta-value"> {{i.dateUploaded}} </span>. <span class="meta-value ml-2"><span class="fa fa-clock-o"></span> 1 min</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
+                
 
                 </div>
 
@@ -565,33 +351,7 @@
         </div>
     </div>
 
-    <!-- <section class="-testimonials mt-xl-4" id="testimonials">
-       
-        <div class="testimonials pt-2 pb-5">
-            <div class="container pb-lg-5">
-                <div class="owl-testimonial owl-carousel owl-theme mb-md-0 mb-sm-5 mb-4">
-                    {% for i in sliderContent %}
-                    <div class="item">
-                        <div class="row slider-info">
-                            <div class="col-lg-8 message-info align-self">
-                                <span class="label-blue mb-sm-4 mb-3">{{i.blog.category}}</span>
-                                <h3 class="title-big mb-4">{{i.blog.title}}
-                                </h3>
-                                <div class="message-box">
-                                    <p class="message">{{i.blog.content}}</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-8 img-circle mt-lg-0 mt-4">
-                                <img src="{% static '/images/beauty.jpg' %}" class="img-fluid radius-image-full" alt="client image">
-                            </div>
-                        </div>
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
-        
-    </section> -->
+    
 
 
     <div class="-subscribe py-5">
@@ -616,26 +376,28 @@
                     <div class="row footer-top-28">
                         <div class="col-lg-4 footer-list-28 copy-right mb-lg-0 mb-sm-5 mt-sm-0 mt-4">
                             <a class="navbar-brand mb-3" href="index.html">
-                                <span class="fa fa-newspaper-o"></span> NewsBlog</a>
+                                <span class="fa fa-newspaper-o"></span> BlogMarix</a>
 
                         </div>
                         <div class="col-lg-8 row">
                             <div class="col-sm-4 col-6 footer-list-28">
                                 <h6 class="footer-title-28">Useful links</h6>
                                 <ul>
-                                    <li><a href="#categories">food blogs</a></li>
-                                    <li><a href="#advertise">Advertise with us</a></li>
-                                    <li><a href="#authors">Our Authors</a></li>
-                                    <li><a href="contact.html">Get in touch</a></li>
+                                    <li><a href="/category/food">food blogs</a></li>
+                                    <li><a href="/contact">Advertise with us</a></li>
+                                    <!-- <li><a href="#authors">Our Authors</a></li> -->
+                                    <li><a href="/contact">Get in touch</a></li>
                                 </ul>
                             </div>
                             <div class="col-sm-4 col-6 footer-list-28">
                                 <h6 class="footer-title-28">Categories</h6>
                                 <ul>
-                                    <li><a href="beauty.html">Beauty</a></li>
-                                    <li><a href="fashion.html">Fashion and Style</a></li>
+                                    {% for i in categories %}
+                                    <li><a href="/category/{{i.name}}">{{i.name}}</a></li>
+                                    {% endfor %}
+                                    <!-- <li><a href="fashion.html">Fashion and Style</a></li>
                                     <li><a href="#food"> Food and Wellness</a></li>
-                                    <li><a href="#lifestyle">Lifestyle</a></li>
+                                    <li><a href="#lifestyle">Lifestyle</a></li> -->
                                 </ul>
                             </div>
                             <div class="col-sm-4 col-6 footer-list-28 mt-sm-0 mt-4">
@@ -764,6 +526,19 @@
         alert('{{i}}')
     </script>
     {% endfor %}
+
+    <script>
+        function changeToLogin(){
+            document.getElementById('loginDivision').style.display = 'block';
+            console.log(document.getElementById('loginDivision').style.display)
+            document.getElementById('registerDivision').style.display = 'none'
+        }
+        function changeToRegister(){
+            document.getElementById('loginDivision').style.display = 'none';
+            document.getElementById('registerDivision').style.display = 'block'
+        }
+        changeToLogin()
+    </script>
 </body>
 
 </html>
