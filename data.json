@@ -1,0 +1,189 @@
+[{
+        "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "password": "pbkdf2_sha256$260000$DtNmynvgL9Q6an3vCM8hIn$d0WlKXksoqz1j3AL5x+65kQMuHkr5tDR5eFaJ9qIUFE=",
+            "last_login": "2021-06-19T04:34:29.924Z",
+            "is_superuser": true,
+            "username": "admin",
+            "first_name": "",
+            "last_name": "",
+            "email": "admin@admin.com",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2021-06-18T17:34:37.562Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "blogcodecs.blogs",
+        "pk": 1,
+        "fields": {
+            "title": "How to be productive at home?",
+            "content": "Hey everyone, in this article, I am going to give some tips to become more productive while working from home. Let�s begin.\r\n\r\nYour own dedicated work desk\r\n\r\nIt is really important for your productivity. It gives you a sense of responsibility like you get when you are in the office. Luckily, you don�t need a fancy office at home, you just need a corner space or a different room where you can set up your work table and vallah, start working. When you work at different places like the hall, kitchen, bedroom, balcony, it can give you temporal stress relief but continued working there, it makes you less productive, you get lost every time in things that you can not focus.\r\n\r\nSet some boundaries\r\n\r\nWhen you are working from home, it�s obvious that you are gonna get distracted by your friends, families. You are at home now, and most probably you will have to get involved in family matters even you don�t want to. Since you are at home, your family and friends might think that you are available every time and distract you with their silly little things. You need to set some boundaries in your workspace. Tell them about your work schedule and ask them not to disturb you if it�s not urgent. It�s really important that you say no to things that are not urgent.\r\n\r\nMake a to-do list\r\n\r\nIn the office, your manager or someone might guide you on what to do, but at home, you are your own boss. You need to be prepared for the day so that you don�t miss anything. Make a to-do list with all the important work you have to do today. Keep important work first and least important work at the last. If you keep a detailed list, you might accomplish more things than you ever did.\r\n\r\nUse productivity apps\r\n\r\nThese days there are applications for any function required at the workplace. Organize your notes with the apps like Evernote. Organize your tasks and projects with the apps like Jira and Asana. Find apps that are useful to your productivity and they will give your productivity a much-needed boost.\r\n\r\nSchedule your breaks\r\n\r\nAfter every 2 hours, give yourself a small break, go in the kitchen and eat something nice. Also, give yourself a lunch break as well. After the break, you will see that you are more productive and you have a fresh mind to pick up where you left off.\r\n\r\nGet ready before starting work\r\n\r\nAlways brush your teeth, take a shower, eat breakfast, and get dressed before starting work. Don�t work in your pajama. working in Pajama is a great way of ruining your productivity. Because the attitude of your clothing and other hygiene standards affects your productivity.\r\n\r\nManage your phone\r\n\r\nWhen you are at home, nobody is seeing you using the phone and nobody is there to complain about your phone use, that doesn�t mean that you will use it compulsively. With every notification of social media, you get distracted and waste some valuable minutes of your working hours. You can either silent the notifications or you might use apps like �stay focused� to well stay focused. It lets you block distracting websites and apps for a particular time so that you can focus on the real thing.",
+            "submitedBy": 1,
+            "dateUploaded": "2021-06-19T11:04:24.530Z",
+            "updatedOn": "2021-06-19T03:48:23.604Z",
+            "category": 1,
+            "likes": 0
+        }
+    },
+    {
+        "model": "blogcodecs.blogs",
+        "pk": 2,
+        "fields": {
+            "title": "How Japanese people are so fitter and thinner?",
+            "content": "If you ever been to Japan, you will see that it is so hard to find a fat Japanese person. In other countries like the USA or India or Europe, it�s quite a different story. The rate of obesity among adults in America is about 35%, whereas, in Japan, the obesity rate is only 3.5%. But what makes the weight in these two countries so different? Let�s learn.\r\n\r\nIt�s common to think that Japanese people drink a lot of green tea, or they eat a lot of fermented foods, etc. Let�s not reach a conclusion yet. In America, there is about 2,50000 fast-food establishment in America, whereas in Japan there is only around 6500 establishment. Now in Japan, fried food, junk food, and all the unhealthy food are still available wherever you go but there is also a decent variety of equally convenient and reasonable healthy food.\r\n\r\nSo let�s say in the USA, you are late for work, what�s your breakfast option? Maybe a cheese whipped burger or fries or pancakes etc, whereas, in Japan, you can easily access a reasonable healthy food like- rice ball, a small salad, a package of Sushi, or a thing of fish with Miso or some soup. You can easily make yourself a healthy breakfast in less than 5 USD.\r\n\r\nMoving forward, in Japan, the car ownership rate is really low. Public transportation in Japan is really impressive. If you are in Tokyo, your destination is almost always within a 20-minute walk from that area�s bus or subway. People in Japan do more walking. More walking means thinner and healthier. But there is more to it.\r\n\r\nIn Japan, the size of your meal bowl is smaller. When people travel to Japan, they always get disappointed with the size of their meals. So it seems that Japanese people spend more money on fewer calories since the food there is also expensive. The consumption of green tea or fermented foods sure does help in the equation.   \r\n\r\nIn Japan, school lunches are prepared by schools and nutritionists, and eating manners are taught by teachers. So one of the main reasons they are so disciplined is that they have been taught this from school.  \r\n\r\nThere is more to their culture and so many things and facts I still haven�t mentioned. Hopefully, I will be able to cover them in the future after I learn more.",
+            "submitedBy": 1,
+            "dateUploaded": "2021-06-19T11:04:24.530Z",
+            "updatedOn": "2021-06-19T04:43:42.031Z",
+            "category": 2,
+            "likes": 0
+        }
+    },
+    {
+        "model": "blogcodecs.blogs",
+        "pk": 3,
+        "fields": {
+            "title": "Why people meditate- life-changing benefits",
+            "content": "Thousands of studies have demonstrated that mindfulness meditation can improve mental and physical health. Mindfulness has been shown to help people reduce stress, sleep better, focus better, and improve relationships. I am here to talk about the 7 benefits of mindfulness. Let�s begin\r\n\r\nRemoves anxiety and depression\r\n\r\nMeditation has been demonstrated to be just as helpful as pharmaceuticals in reducing anxiety and depression symptoms. It raises the body's prana (life force) level. Anxiety lessens automatically when the prana level rises, according to Ayurveda.\r\n\r\nEnhance focus, energy, and memory\r\n\r\nMeditation enhances concentration and allows you to be present at the moment. If you pay attention, you'll see that the mind oscillates between the past and the future. We are either enraged by the past or fearful of the future. Meditation assists in bringing the mind back to the present moment. As a result, your focus and attention span will improve. Meditation increases grey matter in the brain, which helps with memory\r\n\r\nImproves the immune system\r\n\r\nStudies have shown that calming your mind through meditation, develops resistance to various diseases. I am not saying that meditation will work as a shield that will not allow you to fall ill again, but it appears that it does reduce the counts of falling sick. While there is no certainty but a dose of meditation will definitely reduce the number of times you fall sick comparatively when you don�t meditate.\r\n\r\nReduces psychological stress\r\n\r\nPeople have stress on various occasions in life. For example, people can get stressed when they get married, when they go to a different city, when they get a new job, etc. Meditation helps them calm their mind in these situations. According to a study made on two groups of people one who meditated and others who didn�t, the ones who meditated were far less stressed than the ones who didn�t after 8 weeks.\r\n\r\nHelps with Pain\r\n\r\nThe National Center for Complementary and Integrative Health (NCCIH) discovered that mindful meditation decreases physical pain without relying on the brain's natural opioids (Cherkin et al., 2016). According to the findings, combining meditation with medication to treat pain illnesses such as osteoarthritis, headaches, and other chronic pains can provide long-term relief.\r\n\r\nImprove self-esteem and self-awareness\r\n\r\nMindfulness meditation enables you to slow down, allowing for more in-depth self-reflection and can assist you in discovering positive aspects of yourself.\r\n\r\nCan help with Addiction\r\n\r\nGiven that addiction is a medical disease with a direct link to mental health, it stands to reason that a practice like mindful meditation could be beneficial in the treatment of substance abuse.",
+            "submitedBy": 1,
+            "dateUploaded": "2021-06-19T11:04:24.530Z",
+            "updatedOn": "2021-06-19T04:44:16.227Z",
+            "category": 1,
+            "likes": 0
+        }
+    },
+    {
+        "model": "blogcodecs.blogs",
+        "pk": 4,
+        "fields": {
+            "title": "These habits will mess up your life",
+            "content": "aking everything personally\r\n\r\nDo you take everything personally? This habit causes so many problems in your life. It brings anger and anxiety. It makes you believe that the world is against you. But the truth is most of the things have nothing to do with you. If someone cuts you in traffic or if a stranger slammed the door on your face, well it�s not about you. It�s about them. We�re so wrapped up in our own thoughts that we make everything about ourselves. If something happens, we assume that we are the root cause of that problem. But most people have already preoccupied with their own thoughts and you are probably the last person in their mind. They might honk at you because they had a bad day, not because you are driving too slow. It only feels personal because you made it personal.\r\n\r\nTrying to control everything\r\n\r\nIf someone tries to control you and put their nose in your business every time, how�d that make you feel? Not good I presume. You want that other people don�t interfere in your life but you do the same thing. You try to control people, you try to influence their decisions, you try to manipulate other people using guilt and shame. You get involved in their relationships. You think that you are helping others but the truth is you might be doing more damage than help. For starters, you are hurting your relationship, you are manipulating the people that you care about.\r\n\r\nYou are also hurting the relationship you have with yourself. You are so concentrated on other people�s problems that you forget about your own problems. So leave that habit ASAP. Leave other people's problems to themselves. If someone comes to you for your advice, that's a different thing, you should surely help. But don't be a puppet master, let them make their decisions on their own.\r\n\r\nComparing yourself to other people\r\n\r\nYou go out for a walk or in the gym, and you see an attractive dude and you blindly think that their life must be easier. Now the problem here is, you are undermining their success and making excuses for your failures. You are thinking that just because they have something which you don�t, make them successful which is totally wrong. Another thing is because you don�t have one single trait, you are ignoring the other traits that you have. You might have a great sense of humor, or a great dressing style, yes you might not be that much good-looking as that other guy but so what? You are a combination of so many other qualities. What if they are just good-looking and they lack a good sexy brain like yours? Cut yourself some slack and don�t compare yourself blindly.\r\n\r\nDay  Dreaming\r\n\r\nDreams are important. They keep you motivated to work towards your goal. But, if you only dream about the outcome, you spend so much time dreaming that you don�t actually work on achieving it. So many people make this mistake. Every dream requires strategy, hard work, and passion. If you don�t have the passion to follow through, then dream about something else. Dream about something you want to achieve and then make that dream a reality.\r\n\r\nBreaking bank\r\n\r\nHow often do you buy things you don�t need? Compulsive shopping is one of the most common bad habits. People usually buy things they don�t need, with the money they did not earn, to impress the people who don�t care about them. When you buy something exciting, it gives you pleasure for some days then the pleasure just goes away and you crave more things- bigger and better. Do shopping as a reward of your hard work. It�s okay to treat yourself every once in a while, but make sure you are not shopping for the sack of just shopping.",
+            "submitedBy": 1,
+            "dateUploaded": "2021-06-19T11:04:24.530Z",
+            "updatedOn": "2021-06-19T04:44:44.639Z",
+            "category": 2,
+            "likes": 0
+        }
+    },
+    {
+        "model": "blogcodecs.blogs",
+        "pk": 5,
+        "fields": {
+            "title": "5 signs that indicates you are going to be a rich person.",
+            "content": "You don't believe in status quos\r\n\r\nYou don't believe all the advice people through at you. 'Invest in mutual funds' 'Don't do business, there is so much risk',  'you need to get a degree, in order to succeed in life, of you need to have this, you need to have that, blah blah blah'\r\n\r\nWe live in a world that is constantly changing. The best way to get success is not the best way to get succeed 100 years ago. Now think about it, getting a degree was not even an option 200 years ago. and like 1000 years ago, every family had a business and yet we tell people not to start one now. Those who become rich question half of the things they are taught. They realize that most of the things aren't true anymore. This allows them to spot the opportunities way before other people can realize, which gives them a first-mover advantage and also a lot of money if they are right. Because you make the most money batting on things that others are not. \r\n\r\nYou don't show off and keep a budget\r\n\r\nAnother characteristic shared by millionaires is their ability to live below their means. Instead of flaunting their wealth, many people drive practical cars, live in modest homes, and don't spend their money on luxury items. For example, putting at least half of everything you earn into a savings account that you can use to make investments. In the long run, that saves you a lot of money.\r\n\r\nYou don't live in the past\r\n\r\nPoliticians may benefit from fantasizing about the \"good old days,\" but millionaires will not. These are people who have overcome failure, rejection, and fear, and they are most concerned with investing in their futures.\r\n\r\nYo spend your time setting new goals\r\n\r\nThe rich spend their time considering their long-term goals and needs. \"You don't make a million by accident,\" writes Peter Voogd, founder of The Game Changers Academy and a millionaire before the age of 26. \"If it's not a goal, you're not going to hit it.\"\r\n\r\nYou know how to maximize your strengths \r\n\r\n\"I suck at 99 percent of the stuff,\" Gary Varynerchuk once said, \"but I go all out on the 1 percent I'm good at.\"\r\n\r\nThat's not to say you shouldn't learn something new or work on some of your weaker skills; rather, millionaires are able to capitalize on their greatest strengths and then surround themselves with people who can help them improve on their weaknesses.",
+            "submitedBy": 1,
+            "dateUploaded": "2021-06-19T11:04:24.530Z",
+            "updatedOn": "2021-06-19T04:46:08.070Z",
+            "category": 1,
+            "likes": 1
+        }
+    },
+    {
+        "model": "blogcodecs.blogs",
+        "pk": 6,
+        "fields": {
+            "title": "7 stupid purchases rich people make.",
+            "content": "Apps worth 1000$\r\n\r\nThere are thousands of apps that are bullshit and have nothing to be paid for yet they are worth a fortune and the funny thing is that they have 50k+ downloads on them. Who buys such apps, well, of course, rich people. There is an app on the iOS app store, called 'I'm Rich' The sole purpose of this app is to show others that they can afford it. Brilliant.\r\n\r\nHouse in every city they visit\r\n\r\nYou don't really need a house in every city you visit on a regular basis, and it can't be justified by claiming you make more money with a real estate portfolio. If that were the case, you should invest in commercial properties where others pay you to rent and maintain the property for you. All you're doing with multiple houses are paying extra mortgages or rental fees, maintenance, and property tax.\r\n\r\nPersonal bathing tub for the dog with diamonds on it\r\n\r\nWell, the dog must have demanded it. Otherwise, why would they buy that? Actually, I forgot, they are rich people so they can buy anything, I'm not surprised. \r\n\r\nExpensive Yachts and boats\r\n\r\nWhat's the point of buying boats if you are only gonna use it once a year, hardly. Unless sailing is your passion, purchasing a large boat is a bad investment. Some millionaires never even use their yachts because they are too preoccupied with other aspects of their lives. This translates to additional costs for storing the yacht and hiring a crew to maintain it. At the thought of this stupid purchase, you can almost smell burning bills.\r\n\r\nBuying an entire island\r\n\r\nNo millionaire wants to live on an island; it just sounds cool to tell people you have your own island. It, like the other items on this list, is a status purchase rather than a practical way to spend your money. Many islands cannot be developed or would be prohibitively expensive to do so. An island is a bad investment unless you intend to turn it into a resort to generate revenue.\r\n\r\nVey expansive sport cars\r\n\r\nAll I see is a Ferrari or Lamborghini, that can go 0-100kmph in less than 5 seconds, stuck in red lights or being ride at the speed of 50-80kmph. Alright, they are getting attention, but is this the attention they really want? If someone asks me, 'want to see how fast it can go?' My answer will always NO. I don't trust them nor they trust themselves. Unless you are a professional driver, there is no sense in buying an expansive fast sports car. The worst thing they do is to buy such cars for their children who are barely legally aged. Even if they are 18, they are still developing their brain and still lack judgment especially if they have to make a fast one. \r\n\r\nOver expansive daily use stuff\r\n\r\nOk, this one is special. There are people who buy a diamond tea bag worth 1500$, a crystal ergoripado vacuum cleaner worth 19000$, A gold shirt worth 200,000$. Well, I can think of 100 different and better ways they can spend that kind of money.",
+            "submitedBy": 1,
+            "dateUploaded": "2021-06-19T11:04:24.530Z",
+            "updatedOn": "2021-06-19T04:46:40.352Z",
+            "category": 1,
+            "likes": 0
+        }
+    },
+    {
+        "model": "blogcodecs.blogs",
+        "pk": 7,
+        "fields": {
+            "title": "7 body language tips to aid in your charisma",
+            "content": "Put a smile on\r\n\r\nA genuine, friendly smile will increase your likeability and demonstrate to the interviewer that you have personality. You don't want to come across as too serious or negative; no one wants to work with people like that every day. Smile, laugh if appropriate, but don't make it look too forced or manic, or you'll come across as scary. It immediately creates a sense of warmth and trust in the other person.\r\n\r\nAlways make eye contact\r\n\r\nEye contact is extremely important, as long as it is used appropriately. Why do you think it's important to keep eye contact with a police officer when you're pulled over? Eye contact should be maintained 80 percent of the time. Keeping your eyes level with the person you're communicating with shows them you're self-assured and confident. This is especially useful if you're explaining or presenting a difficult or valuable message.\r\n\r\nKeep your shoulders up\r\n\r\nearn how to project confidence by standing tall, pushing your shoulders back slightly, and opening up your chest. Make sure your shoulders are even, as unevenness conveys indecision. Also, make sure your shoulders are squared toward your speaking partner.\r\n\r\nMake a firm handshake\r\n\r\nA firm, strong handshake is one of the most effective ways to convey confidence without appearing arrogant. People are drawn to people who have faith in others and want to work with them. A shaky handshake makes you appear weak and incompetent, and it raises questions about your ability to do the job.\r\n\r\nUse gestures while talking or presenting\r\n\r\nWhen used sparingly, this gesture can be very effective. Making gentle hand gestures as you speak can help you make your point while also calming your nerves. However, if you overdo it, you will come across as extremely nervous, which you do not want\r\n\r\nDon't stand too close to another party\r\n\r\nStanding too close will make people feel uneasy, and standing too far away may imply insecurity. Standing about an arm's length away shows that you are willing to engage and speak with the person.\r\n\r\nHave clarity in your speech \r\n\r\nThe goal is to make people understand what you have to say. You don't have to show off your vocabulary. Always try to keep it simple.",
+            "submitedBy": 1,
+            "dateUploaded": "2021-06-19T11:04:24.530Z",
+            "updatedOn": "2021-06-19T04:47:06.506Z",
+            "category": 1,
+            "likes": 0
+        }
+    },
+    {
+        "model": "blogcodecs.blogs",
+        "pk": 8,
+        "fields": {
+            "title": "Signs that indicates you are wasting your life",
+            "content": "You complain a lot\r\n\r\nThe worst thing you could do is to complain rather than finding a solution. The world does not owe you anything. Everyone has a problem that needs to be solved. Complaining wastes time, and as a result, the real problem takes longer to resolve. Rather than whining and blaming others, use that time to solve the problem. Complaining not only casts a negative light on everything but also makes it more difficult to be creative and find solutions. A pessimist is never open to new ideas. Instead, try to be positive in order to bring out your creativity. Instead of complaining and exacerbating the situation, try to find a solution.\r\n\r\nYou spend your time aimlessly\r\n\r\nSome activities are inherently aimless, carried out solely for the sake of pleasure at the moment. Spending time on social media, watching TV, playing video games, are examples of such an activity. These types of activities, in small doses of no more than an hour or two per day, can be an important part of decompressing. Any more than that, however, and you've crossed the line from 'decompressing' to 'wasting your life.' People who have a goal don't waste their time doing things like this because they know that every hour sucked away by meaningless activities is an hour they will never get back.\r\n\r\nYou plan more and do less\r\n\r\nIf you spend more time daydreaming, planning, or thinking about the future than working to make that future a reality, you are not making the most of your life.\r\nPeople who make a name for themselves do not sit around daydreaming about the future. People who make a name for themselves set a goal for the future and then work hard to achieve that goal. Someone who spends their entire day daydreaming is not someone who spends their entire day doing.\r\n\r\nYou do the same activities every day and don't learn anything new\r\n\r\nIf you aren't constantly growing and learning as a person, you are stagnant � like a still pond that doesn't move and accumulates green gunk. That's what happens to your mind if you don't keep it active and learning new things. Positive challenges in your life will expand your mind rather than shrink it.\r\n\r\nYou spend time with people who bring you down\r\n\r\nIt's easy to get stuck with people who don't make you feel like a better person. But if you keep doing that, you will either remain stagnant or be dragged down with them. I like to refer to them as \"Energy Vampires.\" They drain your life force and provide you with nothing in return. Instead, seek out people who are interested in personal development.",
+            "submitedBy": 1,
+            "dateUploaded": "2021-06-19T11:04:24.530Z",
+            "updatedOn": "2021-06-19T04:47:37.508Z",
+            "category": 1,
+            "likes": 1
+        }
+    },
+    {
+        "model": "blogcodecs.category",
+        "pk": 1,
+        "fields": {
+            "name": "productivity"
+        }
+    },
+    {
+        "model": "blogcodecs.category",
+        "pk": 2,
+        "fields": {
+            "name": "food"
+        }
+    },
+    {
+        "model": "blogcodecs.tags",
+        "pk": 1,
+        "fields": {
+            "name": "slider"
+        }
+    },
+    {
+        "model": "blogcodecs.tags",
+        "pk": 2,
+        "fields": {
+            "name": "editor Picks"
+        }
+    },
+    {
+        "model": "blogcodecs.tags",
+        "pk": 3,
+        "fields": {
+            "name": "top Blogs of Month"
+        }
+    },
+    {
+        "model": "blogcodecs.tags",
+        "pk": 4,
+        "fields": {
+            "name": "Trending Now"
+        }
+    },
+    {
+        "model": "blogcodecs.blogplustags",
+        "pk": 1,
+        "fields": {
+            "blog": 1,
+            "tags": 1
+        }
+    },
+    {
+        "model": "blogcodecs.blogplustags",
+        "pk": 2,
+        "fields": {
+            "blog": 3,
+            "tags": 1
+        }
+    },
+    {
+        "model": "blogcodecs.blogplustags",
+        "pk": 3,
+        "fields": {
+            "blog": 8,
+            "tags": 1
+        }
+    }
+]
